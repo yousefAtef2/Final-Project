@@ -1,0 +1,364 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fc;
+    color: #17202a;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: white;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e9a23b;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e9a23b;
+}
+
+.nav-btn {
+    background-color: #17202a;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 25, 35, 0.85),
+            rgba(15, 25, 35, 0.25)
+        ),
+        url("images/paris.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.small-title {
+    color: #e9a23b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e9a23b;
+}
+
+.description {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #eeeeee;
+}
+
+.main-btn {
+    display: inline-block;
+    background-color: #e9a23b;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #c98421;
+    transform: translateY(-3px);
+}
+
+/* Destinations */
+.destinations {
+    padding: 80px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+}
+
+/* Main Card */
+.destination-card {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    min-height: 430px;
+}
+
+/* Left Side */
+.info-side {
+    width: 50%;
+    padding: 40px;
+}
+
+.city-number {
+    color: #e9a23b;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.country {
+    color: #999;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.info-side h2 {
+    font-size: 45px;
+    margin: 10px 0 15px;
+}
+
+.city-description {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+.detail-item h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.detail-item p {
+    font-size: 13px;
+    color: #888;
+}
+
+.explore-btn {
+    background-color: #17202a;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #e9a23b;
+}
+
+/* Right Side */
+.image-side {
+    width: 50%;
+    position: relative;
+    min-height: 430px;
+}
+
+.image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.3s;
+}
+
+.image-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    padding: 18px 25px;
+    border-radius: 8px;
+}
+
+.image-badge span {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.image-badge h3 {
+    font-size: 30px;
+    color: #e9a23b;
+    margin-top: 5px;
+}
+
+/* Slider Controls */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.control-btn {
+    background-color: #17202a;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.control-btn:hover {
+    background-color: #e9a23b;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #e9a23b;
+}
+
+/* About */
+.about {
+    text-align: center;
+    padding: 65px 20px;
+    background-color: #17202a;
+    color: white;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #101820;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .destination-card {
+        flex-direction: column-reverse;
+    }
+
+    .info-side,
+    .image-side {
+        width: 100%;
+    }
+
+    .image-side {
+        min-height: 300px;
+    }
+
+    .info-side {
+        padding: 25px;
+    }
+
+    .info-side h2 {
+        font-size: 35px;
+    }
+
+    .slider-controls {
+        gap: 10px;
+    }
+
+    .control-btn {
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+}
